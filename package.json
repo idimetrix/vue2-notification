@@ -36,7 +36,8 @@
     "lint:style": "vue-cli-service lint:style",
     "lib": "vue-cli-service build --dest lib --target lib --name vue-notification ./src/components/index.js",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.6.2",
