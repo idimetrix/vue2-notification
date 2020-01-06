@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+$animationDuration: 1s !default;
+
+$quoteAnimationNames: false !default;
+
+// Mixin
+@import "transitions";
+
+// Animations
+@import "./bouncing/all";
+@import "./fading/all";
+@import "./rotating/all";
+@import "./sliding/all";
+@import "./zooming/all";
+@import "./flipping/all";
+@import "./lightspeeding/all";

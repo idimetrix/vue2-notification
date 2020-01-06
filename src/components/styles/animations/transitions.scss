@@ -1,0 +1,38 @@
+@function quoteIf($property, $condition) {
+  @if ($condition == true) {
+    @return '#{$property}';
+  } @else {
+    @return $property;
+  }
+}
+
+@mixin make-transitions($base, $names) {
+  .#{$base}-enter-active, .#{$base}In,
+  .#{$base}-leave-active, .#{$base}Out {
+    animation-duration: $animationDuration;
+    animation-fill-mode: both;
+  }
+
+  .#{$base}-enter-active, .#{$base}In {
+    animation-name: quoteIf(#{$base}In, $quoteAnimationNames);
+  }
+
+  .#{$base}-leave-active, .#{$base}Out {
+    animation-name: quoteIf(#{$base}Out, $quoteAnimationNames);
+  }
+
+  @each $name in $names {
+    .#{$base}#{$name}-enter-active, .#{$base}In#{$name},
+    .#{$base}#{$name}-leave-active, .#{$base}Out#{$name} {
+      animation-duration: $animationDuration;
+      animation-fill-mode: both;
+    }
+
+    .#{$base}#{$name}-enter-active, .#{$base}In#{$name} {
+      animation-name: quoteIf(#{$base}In#{$name}, $quoteAnimationNames);
+    }
+    .#{$base}#{$name}-leave-active, .#{$base}Out#{$name} {
+      animation-name: quoteIf(#{$base}Out#{$name}, $quoteAnimationNames);
+    }
+  }
+}

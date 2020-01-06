@@ -1,0 +1,76 @@
+{
+  "name": "vue2-notification",
+  "description": "Simple to use, highly customizable, mobile-friendly Vue.js 2.0+ notification component (modals, toasters, panels, stacks) with SSR support",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dmitry Selikhov",
+    "email": "selikhov.dmitrey@gmail.com",
+    "url": "https://www.linkedin.com/in/dimetrix"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue2",
+    "vuejs2"
+  ],
+  "main": "dist/vue2-notification.umd.min.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idimetrix/vue2-notification"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idimetrix/vue2-notification/issues",
+    "email": "selikhov.dmitrey@gmail.com"
+  },
+  "homepage": "https://github.com/idimetrix/vue2-notification#readme",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib 'src/components/index.js'",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint",
+    "lint:style": "vue-cli-service lint:style",
+    "lib": "vue-cli-service build --dest lib --target lib --name vue-notification ./src/components/index.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "core-js": "^3.6.2",
+    "vue": "^2.6.11",
+    "vue-case": "^1.0.6"
+  },
+  "devDependencies": {
+    "@ascendancyy/vue-cli-plugin-stylelint": "^1.1.2",
+    "@vue/cli-plugin-babel": "^4.1.2",
+    "@vue/cli-plugin-e2e-cypress": "^4.1.2",
+    "@vue/cli-plugin-eslint": "^4.1.2",
+    "@vue/cli-plugin-unit-jest": "^4.1.2",
+    "@vue/cli-service": "^4.1.2",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "1.0.0-beta.30",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "lint-staged": "^9.5.0",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.2.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "pre-push": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

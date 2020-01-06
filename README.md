@@ -1,0 +1,1 @@
+# Simple to use, highly customizable, mobile-friendly Vue.js 2.0+ notification component (modals, toasters, panels, stacks) with SSR support
