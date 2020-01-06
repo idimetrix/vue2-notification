@@ -1,7 +1,7 @@
 {
   "name": "vue2-notification",
   "description": "Simple to use, highly customizable, mobile-friendly Vue.js 2.0+ notification component (modals, toasters, panels, stacks) with SSR support",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Dmitry Selikhov",
     "email": "selikhov.dmitrey@gmail.com",
